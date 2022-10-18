@@ -4,7 +4,9 @@ import altair as alt
 
 st.title("Korelasi rata-rata lama sekolah dan pengangguran di Indonesia")
 
-st.write("Pengangguran sering dikaitkan dengan pendidikan seseorang, apakah pendidikan atau lama sekolah mempengaruhi jumlah pengangguran di Indonesia?")
+
+st.write("Penelitian Polla (2021) mengungkapkan Pendidikan berpengaruh terhadap pengangguran. Pendidikan diposisikan sebagai sarana untuk peningkatan kesejahteraan melalui pemanfaatan kesempatan kerja yang ada dan mencerminkan tingkat kepandaian dan pencapaian pendidikan formal dari penduduk karena semakin tinggi pula kemampuan kerja atau produktivitas seseorang dalam bekerja. Pendidikan yang tinggi dapat mempengaruhi banyak sektor salah satunya ialah tingkat pengangguran. Jadi apakah Pendidikan dalam hal ini Rata rata lama sekolah memiliki korelasi dengan tingkat pengangguran di Indonesia?")
+
 df = pd.read_csv("Presentase pengangguran diindonesia.csv")
 st.dataframe(df.style.format({'Rata rata lama sekolah (Tahun)': '{:.2f}', 
                              'Presentase pengangguran (%)': '{:.2f}',
@@ -12,7 +14,7 @@ st.dataframe(df.style.format({'Rata rata lama sekolah (Tahun)': '{:.2f}',
 
 
 
-st.caption("Data diatas menunjukkan data rata rata lama sekolah dan pengangguran di indonesia yang diambil dari Badan Pusat Statistik Indonesia. Data yang tersedia adalah data dari 9 tahun terakhir.")
+st.caption("Badan Pusat Statistik merilis Rata-rata Lama Sekolah (RLS) dan Persentase Penduduk yang Pengangguran di Indonesia periode 2013 hingga 2021.")
 
 
 
@@ -32,10 +34,14 @@ chart = alt.Chart(new_df).mark_line(point = True).encode(
     y="value",
     color='label',
 ).properties(
-    title="Grafik Rata-rata Lama Sekolah (Tahun) dan Presentase Pengangguran (%)"
+    title="Grafik Rata-rata Lama Sekolah (Tahun) dan Persentase Pengangguran (%)"
 )
 st.altair_chart(chart, use_container_width=True)
 
-st.write("Grafik diatas menunjukkan rata rata lama sekolah di indonesia meningkat secara fluktuasif dari tahun ke tahun. Peningkatan tidak terjadi secara signifikan selama sembilan tahun terakhir. Data dari tahun 2013 hingga 2021 hanya meningkat sebanyak 0,70% dari awalnya 7,61 tahun ke 8,54 tahun. Sedangkan presentase pengangguran mengalami fluktuasi selama sembilan tahun terakhir.")
+st.write("Grafik diatas menunjukkan rata rata lama sekolah di indonesia cenderung stabil selama 9 tahun terakhir. Hal tersebut tercermin membaiknya rata-rata lama sekolah di Indonesia. Data dari tahun 2013 hingga 2021 hanya meningkat sebanyak 0,70% dari awalnya 7,61 tahun ke 8,54 tahun. Sedangkan persentase pengangguran mengalami fluktuasi selama sembilan tahun terakhir. Tingkat perubahan signifikan persentase pengangguran terjadi pada tahun 2019 hingga 2021 yang telah diketahui padaa periode tersebut merupakan awal dari munculnya COVID-19.")
 
-st.subheader("Rata-rata lama sekolah di Indonesia tidak terlalu mempengaruhi jumlah pengangguran diindonesia")
+
+st.subheader("Kesimpulan")
+st.markdown("1. Rata-rata lama sekolah di Indonesia tidak mempengaruhi persentase pengangguran diindonesia.")
+st.markdown("2. Rata-rata lama sekolah meningkat cenderung stabil dari tahun ke tahun")
+st.markdown("3. Persentase pengangguran meningkat secara signifikan saat munculnya wabah COVID-19.")
