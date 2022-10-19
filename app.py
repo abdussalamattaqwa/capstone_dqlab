@@ -31,9 +31,10 @@ chart = alt.Chart(final_top).mark_line(point=True).encode(
     title="Persentase Perbandingan Rata-rata Lama Sekolah di Indonesia dengan Top 5 Negara Lain"
 )
 st.altair_chart(chart, use_container_width=True)
-st.write("Rata rata lama sekolah di Indonesia dibandingkan dengan negara lain sangat jauh. German sebagai negara tertinggi dengan rata-rata lama sekolah pada tahun 2019 berada pada angka 14,13 tahun yang mengartikan rata-rata penduduk German telah menempuh pendidikan selama 14,13 tahun. Hasil ini sangat jauh dibandingkan Indonesia yang pada tahun 2019 mencapai 8,34 tahun.")
+st.write("Rata rata lama sekolah di Indonesia dibandingkan dengan negara lain sangat jauh. German sebagai negara tertinggi dengan rata-rata lama sekolah pada tahun 2019 berada pada angka 14,13 tahun yang mengartikan rata-rata penduduk German telah menempuh pendidikan selama 14,13 tahun. Hasil ini sangat jauh dibandingkan Indonesia yang pada tahun 2019 mencapai 8,34 tahun selisih 5,79 tahun dengan rata-rata lama sekolah di German.")
 
-
+st.subheader(
+    'Rata-rata Lama Sekolah dan Persentase Penangguran di Indonesia')
 df = pd.read_csv("Presentase pengangguran diindonesia.csv")
 st.dataframe(df.style.format({'Rata rata lama sekolah (Tahun)': '{:.2f}',
                              'Presentase pengangguran (%)': '{:.2f}',
@@ -70,6 +71,12 @@ st.subheader("Kesimpulan")
 st.markdown(
     "1. Rata-rata lama sekolah di Indonesia tidak mempengaruhi persentase pengangguran di Indonesia.")
 st.markdown(
-    "2. Rata-rata lama sekolah meningkat cenderung stabil dari tahun ke tahun")
+    "2. Rata-rata lama sekolah meningkat cenderung stabil dan tidak signifikan dari tahun ke tahun")
 st.markdown(
     "3. Persentase pengangguran meningkat secara signifikan saat munculnya wabah COVID-19.")
+
+
+st.subheader("Daftar Pustaka")
+st.markdown('Polla, E. F., Walewangko, E. N., & Tumangkeng, S. Y. (2021). Pengaruh Tingkat Pendidikan, Pertumbuhan Ekonomi, dan Upah Minimum Terhadap Pengangguran di Kabupaten Minahasa Selatan Tahun 2009-2019. Jurnal Berkala Ilmiah Efisiensi, 21(2).')
+st.markdown('http://reports.weforum.org/global-competitiveness-index//')
+st.markdown('https://ourworldindata.org/grapher/mean-years-of-schooling-long-run')
