@@ -73,7 +73,7 @@ st.markdown(
 st.markdown(
     "2. Rata-rata lama sekolah meningkat cenderung stabil dan tidak signifikan dari tahun ke tahun")
 st.markdown(
-    "3. Persentase pengangguran meningkat secara signifikan saat munculnya wabah COVID-19.")
+    "3. Persentase pengangguran meningkat secara signifikan saat munculnya wabah COVID-19 pada tahun 2020.")
 
 st.subheader("Rekomendasi")
 st.markdown(
