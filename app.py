@@ -64,7 +64,7 @@ chart = alt.Chart(new_df).mark_line(point=True).encode(
 )
 st.altair_chart(chart, use_container_width=True)
 
-st.write("Grafik diatas menunjukkan rata rata lama sekolah di indonesia cenderung stabil selama 9 tahun terakhir. Hal tersebut tercermin membaiknya rata-rata lama sekolah di Indonesia. Data dari tahun 2013 hingga 2021 hanya meningkat sebanyak 0,70% dari awalnya 7,61 tahun ke 8,54 tahun. Sedangkan persentase pengangguran mengalami fluktuasi selama sembilan tahun terakhir. Tingkat perubahan signifikan persentase pengangguran terjadi pada tahun 2019 hingga 2021 yang telah diketahui padaa periode tersebut merupakan awal dari munculnya COVID-19.")
+st.write("Grafik diatas menunjukkan rata rata lama sekolah di indonesia cenderung stabil selama 9 tahun terakhir. Hal tersebut tercermin membaiknya rata-rata lama sekolah di Indonesia. Data dari tahun 2013 hingga 2021 hanya meningkat sebanyak 0,70% dari awalnya 7,61 tahun ke 8,54 tahun. Sedangkan persentase pengangguran mengalami fluktuasi selama sembilan tahun terakhir. Tingkat perubahan signifikan persentase pengangguran terjadi pada tahun 2020 hingga 2021 yang telah diketahui pada periode tersebut merupakan awal dari munculnya COVID-19.")
 
 
 st.subheader("Kesimpulan")
@@ -75,8 +75,14 @@ st.markdown(
 st.markdown(
     "3. Persentase pengangguran meningkat secara signifikan saat munculnya wabah COVID-19.")
 
+st.subheader("Rekomendasi")
+st.markdown(
+    "Pemerintah memberikan perhatian lebih untuk meningkatkan rata-rata lama sekolah di Indonesia, karena rata-rata lama sekolah di Indonesia tergolong rendah jika dibandingkan dengan negara lain.")
 
-st.subheader("Daftar Pustaka")
-st.markdown('Polla, E. F., Walewangko, E. N., & Tumangkeng, S. Y. (2021). Pengaruh Tingkat Pendidikan, Pertumbuhan Ekonomi, dan Upah Minimum Terhadap Pengangguran di Kabupaten Minahasa Selatan Tahun 2009-2019. Jurnal Berkala Ilmiah Efisiensi, 21(2).')
-st.markdown('http://reports.weforum.org/global-competitiveness-index//')
-st.markdown('https://ourworldindata.org/grapher/mean-years-of-schooling-long-run')
+st.subheader("Referensi")
+st.markdown('Penelitian')
+st.caption('Polla, E. F., Walewangko, E. N., & Tumangkeng, S. Y. (2021). **_Pengaruh Tingkat Pendidikan, Pertumbuhan Ekonomi, dan Upah Minimum Terhadap Pengangguran di Kabupaten Minahasa Selatan Tahun 2009-2019_**. Jurnal Berkala Ilmiah Efisiensi, 21(2).')
+st.markdown('Data')
+st.caption('https://www.bps.go.id/subject/7/energi.html#subjekViewTab5')
+st.caption('http://reports.weforum.org/global-competitiveness-index//')
+st.caption('https://ourworldindata.org/grapher/mean-years-of-schooling-long-run')
